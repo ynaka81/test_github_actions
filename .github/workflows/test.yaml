@@ -10,7 +10,8 @@ jobs:
       - name: Remove existing kustomize and install it again
         run: |
           sudo rm /usr/local/bin/kustomize
-          curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
+          wget "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"
+          bash install_kustomize.sh 4.4.0
       - name: Installed Kustomize version
         run: ./kustomize version
       - run: ./kustomize build .
