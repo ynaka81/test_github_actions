@@ -7,11 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Remove existing kustomize and install it again
-        run: |
-          sudo rm /usr/local/bin/kustomize
-          wget "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"
-          bash install_kustomize.sh 2.1.0
-      - name: Installed Kustomize version
-        run: ./kustomize version
-      - run: ./kustomize build .
+      - run: kustomize build .

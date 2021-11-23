@@ -1,4 +1,4 @@
 namespace: argo
 
 resources:
-- git@github.com:argoproj/argo-workflows.git/manifests/cluster-install?ref=v3.2.4
+- github.com/argoproj/argo-workflows.git/manifests/cluster-install?ref=v3.2.4
