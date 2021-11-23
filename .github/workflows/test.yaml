@@ -11,7 +11,7 @@ jobs:
         run: |
           sudo rm /usr/local/bin/kustomize
           wget "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"
-          bash install_kustomize.sh 3.10.0
+          bash install_kustomize.sh 2.1.0
       - name: Installed Kustomize version
         run: ./kustomize version
       - run: ./kustomize build .
