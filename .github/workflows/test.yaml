@@ -19,3 +19,4 @@ jobs:
         run: |
           kustomize version
           whereis kustomize
+      - run: kustomize build .
