@@ -1,0 +1,16 @@
+name: Dispatch Test
+on:
+  push:
+    branches:
+    - master
+    - release/*
+    paths:
+    - test/**
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: echo dispatch test
