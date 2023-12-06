@@ -8,6 +8,18 @@ on:
     - test/**
   workflow_dispatch:
 
+permissions:
+  actions: read
+  contents: read
+  id-token: write
+
+defaults:
+  run:
+    working-directory: test
+
+env:
+  TARGET: ${{ (github.event_name == 'workflow_dispatch' && 'prod') || (startsWith(github.ref, 'refs/heads/release/') && 'stg') || (github.ref == 'refs/heads/master' && 'dev') }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
