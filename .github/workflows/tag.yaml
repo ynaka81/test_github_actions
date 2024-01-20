@@ -1,0 +1,14 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - prod
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo run
