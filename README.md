@@ -1,1 +1,1 @@
-test repo for GitHub Actions!
+test repository for GitHub Actions
