@@ -6,4 +6,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ${{ github.event.push }}
+    - run: echo '${{ toJSON(github) }}'
