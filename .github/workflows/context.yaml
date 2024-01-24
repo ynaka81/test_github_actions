@@ -2,6 +2,7 @@ name: Context
 
 on:
   pull_request:
+    types: closed
   push:
 
 jobs:
