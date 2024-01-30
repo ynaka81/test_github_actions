@@ -1,0 +1,11 @@
+name: Release
+
+on:
+  push:
+    branches: release/**
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo release
