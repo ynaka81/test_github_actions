@@ -1,7 +1,7 @@
 name: Release
 
 on:
-  create:
+  push:
     branches: release/**
   push:
     branches: release/**
@@ -11,4 +11,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: echo release
+    - run: echo '${{ toJSON(github) }}'
