@@ -1,6 +1,8 @@
 name: Release
 
 on:
+  create:
+    branches: release/**
   push:
     branches: release/**
     paths: README.md
