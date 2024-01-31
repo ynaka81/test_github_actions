@@ -6,6 +6,7 @@ on:
     - master
     - release/**
     paths: README.md
+  workflow_call
 
 jobs:
   test:
