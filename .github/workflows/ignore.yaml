@@ -2,7 +2,7 @@ name: Ignore
 
 on:
   push:
-    paths-ignore: '**'
+    paths-ignore: ./**
 
 jobs:
   test:
