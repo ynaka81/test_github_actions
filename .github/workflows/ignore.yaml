@@ -2,7 +2,9 @@ name: Ignore
 
 on:
   push:
-    paths: '!**'
+    paths-ignore:
+    - '**'
+    - .github/**
 
 jobs:
   test:
