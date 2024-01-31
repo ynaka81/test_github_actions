@@ -2,9 +2,9 @@ name: Ignore
 
 on:
   push:
-    paths-ignore:
-    - '**'
-    - !.github/**
+    paths:
+    - '!**'
+    - README.md
 
 jobs:
   test:
