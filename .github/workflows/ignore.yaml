@@ -2,9 +2,7 @@ name: Ignore
 
 on:
   push:
-    paths:
-    - '!**'
-    - README.md
+    paths-ignore: './**'
 
 jobs:
   test:
