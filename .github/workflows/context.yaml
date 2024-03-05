@@ -11,6 +11,11 @@ jobs:
     steps:
     - run: echo '${{ toJSON(github) }}'
     - run: which go
+    - run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /opt/ghc
+        sudo rm -rf /usr/local/share/boost
+        sudo rm -rf $AGENT_TOOLSDIRECTORY
     - uses: actions/setup-go@v5
       with:
         cache: false
