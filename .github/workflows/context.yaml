@@ -11,3 +11,5 @@ jobs:
     steps:
     - run: echo '${{ toJSON(github) }}'
     - uses: actions/setup-go@v5
+      with:
+        cache: false
