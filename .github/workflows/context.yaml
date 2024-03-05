@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo $AGENT_TOOLSDIRECTORY
+    - run: du -hc $AGENT_TOOLSDIRECTORY
     - run: which go
     - run: ls -al /usr/bin/go
     - run: ls -al /opt/hostedtoolcache/go/1.21.7/x64/bin/go
