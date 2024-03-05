@@ -10,4 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: which go
+    - run: ls -al /usr/bin/go
     - run: echo '${{ toJSON(github) }}'
